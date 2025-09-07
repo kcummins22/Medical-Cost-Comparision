@@ -1,0 +1,60 @@
+# Medical Cost Comparison
+
+This project simulates and compares annual out-of-pocket costs for two types of health insurance plans: a Health Savings Account (HSA) plan and a Traditional plan. By inputting configuration values such as deductible, out-of-pocket maximum, and monthly in-network premium, the program calculates the final yearly cost for a range of medical expenses and visualizes the difference between plans.
+
+## Features
+
+- **Configurable Insurance Parameters:** Easily adjust deductibles, maximum out-of-pocket limits, and monthly costs via separate config files.
+- **Simulation Across Expense Ranges:** Calculates total annual cost for medical expenses from $1,000 to $50,000.
+- **Visual Comparison:** Graphs the results to help you compare HSA and Traditional plans side by side.
+- **Custom Adjustments:** Includes logic for employer HSA contributions.
+
+## How It Works
+
+1. **Insurance parameters** are loaded from `HSA_config.py` and `Trad_config.py`.
+2. The `Medical` function calculates the total out-of-pocket cost for each plan based on:
+    - Deductible
+    - Out-of-pocket maximum
+    - Monthly premium/in-network cost
+    - Annual medical expenses
+3. The simulation runs for both plans over a range of expenses.
+4. Results are printed and plotted using Matplotlib.
+
+## Usage
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/kcummins22/Medical-Cost-Comparision.git
+   cd Medical-Cost-Comparision
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install matplotlib
+   ```
+
+3. **Set your insurance parameters:**
+   - Edit `HSA_config.py` and `Trad_config.py` to match your own plan details.
+
+4. **Run the simulation:**
+   ```bash
+   python Main.py
+   ```
+
+5. **View the output:**
+   - The script prints a table of results and displays a comparison plot of the plans.
+
+## Example Output
+
+![Example Plot](example_plot.png)
+
+## File Structure
+
+- `Main.py`: Main simulation and plotting script.
+- `HSA_config.py`: Configuration for HSA insurance plan.
+- `Trad_config.py`: Configuration for Traditional insurance plan.
+
+## Customization
+
+- Adjust the range of medical expenses in `Main.py` as needed.
+- Modify employer contributions or plan rules in the code logic.
